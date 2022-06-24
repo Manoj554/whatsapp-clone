@@ -1,0 +1,29 @@
+{
+  "name": "whatsapp-clone-backend",
+  "version": "1.0.0",
+  "description": "this is a backend server for a real time chat app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "null"
+  },
+  "keywords": [
+    "real-time",
+    "chat",
+    "app"
+  ],
+  "author": "manoj kumar mondal",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.0",
+    "socket.io": "^4.5.1"
+  }
+}
