@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    body{
+        @apply bg-[#0a1014] text-white
+
+    }
+
+    main, section{
+        @apply w-full
+    }
+
+    button{
+        @apply cursor-pointer
+    }
+
+    /* Customize Scroll Bar  */
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #111;
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #565656; 
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #565656; 
+    }
+}
+
+@layer components{
+    .test{
+        @apply border border-white;
+    }
+}

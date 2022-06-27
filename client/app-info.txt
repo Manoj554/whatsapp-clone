@@ -1,0 +1,46 @@
+//dark-mode
+app-background: #0a1014;
+
+//side background
+    --background-default: #111b21;
+    --background-default-rgb: 17,27,33;
+    --background-default-active: #2a3942;
+    --background-default-active-rgb: 42,57,66;
+    --background-default-hover: #202c33;
+    --background-default-hover-rgb: 32,44,51;
+
+
+//inout box
+    --compose-input-background: #2a3942;
+    --compose-input-background-rgb: 42,57,66;
+    --compose-input-background-focused: #335667;
+    --compose-input-background-focused-rgb: 51,86,103;
+    --compose-input-border: #2a3942;
+    --compose-input-border-rgb: 42,57,66;
+    --compose-input-border-focused: #355b6e;
+    --compose-input-border-focused-rgb: 53,91,110;
+
+//Conversation panel
+    --conversation-panel-background: #0b141a;
+    --conversation-panel-background-rgb: 11,20,26;
+    --conversation-panel-border: rgba(233,237,239,0.12);
+    --conversation-panel-border-rgb: 233,237,239;
+
+//Incoming message
+    --incoming-background: #202c33;
+    --incoming-background-rgb: 32,44,51;
+    --incoming-background-deeper: #1d282f;
+    --incoming-background-deeper-rgb: 29,40,47;
+    --incoming-background-highlight: #040607;
+    --incoming-background-highlight-rgb: 4,6,7;
+    --incoming-primary: #798287;
+    --incoming-primary-rgb: 121,130,135;
+
+//Link     --link: #53bdeb;
+
+    --outgoing-background: #005c4b;
+    --outgoing-background-rgb: 0,92,75;
+    --outgoing-background-deeper: #025144;
+    --outgoing-background-deeper-rgb: 2,81,68;
+    --outgoing-background-highlight: rgba(2,78,65,0.7);
+    --outgoing-background-highlight-rgb: 2,78,65;
