@@ -16,6 +16,10 @@
         @apply cursor-pointer
     }
 
+    li{
+        @apply list-none
+    }
+
     /* Customize Scroll Bar  */
     ::-webkit-scrollbar {
         width: 4px;

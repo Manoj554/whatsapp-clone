@@ -12,7 +12,7 @@ const Welcome = () => {
                 objectFit="contain"
             />
 
-            <h1 className='text-4xl font-thin text-primary-title'>WhatsApp Web 2.0</h1>
+            <h1 className='text-4xl font-thin text-primary-title'>WhatsApp</h1>
             <p className='text-sm text-secondary my-4'>
                 Use WhatsApp to send and receive message faster & secure
             </p>

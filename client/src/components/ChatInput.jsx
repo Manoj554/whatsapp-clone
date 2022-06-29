@@ -1,13 +1,13 @@
 import { MdAttachment, MdEmojiEmotions, MdSend } from 'react-icons/md';
 
-const ChatInput = () => {
+const ChatInput = ({ input, setInput, handleSubmit }) => {
     return (
-        <div className='absolute bottom-0 left-0 py-2 px-4  bg-[#202c33] w-full flex items-center justify-between space-x-5'>
+        <form onSubmit={handleSubmit} className='absolute bottom-0 left-0 py-2 px-4  bg-[#202c33] w-full flex items-center justify-between space-x-5'>
             <div className='flex space-x-4 text-3xl text-[#8696a0]'>
-                <button>
+                <button type='button'>
                     <MdEmojiEmotions />
                 </button>
-                <button>
+                <button type='button'>
                     <MdAttachment />
                 </button>
             </div>
@@ -15,15 +15,17 @@ const ChatInput = () => {
                 <input
                     className='w-full bg-[#2a3942] py-2 px-4 rounded-lg focus:outline-none'
                     placeholder='Type a message'
+                    value={input}
+                    onChange={e => setInput(e.target.value)}
                 />
             </div>
 
             <div className='text-2xl'>
-                <button>
+                <button type='submit'>
                     <MdSend />
                 </button>
             </div>
-        </div>
+        </form>
     )
 }
 
