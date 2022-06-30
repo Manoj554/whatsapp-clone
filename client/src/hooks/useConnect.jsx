@@ -39,7 +39,7 @@ export const UserProvider = ({ children }) => {
             socket.auth = { name: user.displayName };
             socket.connect();
             setUserInfo(userDetails);
-            socket.on("connect", () => {
+            socket.on("connect", (payload) => {
                 console.log("Socket connection successful :- " + socket.connected);
             });
         }
