@@ -64,7 +64,7 @@ const Login = () => {
             {loading ? <InitialLoading /> :
                 <div className="flex pt-20 space-y-12 flex-col items-center justify-start w-full h-screen bg-[#0a1014]">
                     <Logo />
-                    <div className='flex bg-wp-sidebar-bg rounded-md flex-col min-w-[400px] items-center w-[30%] p-3 pb-6'>
+                    <div className='flex bg-wp-sidebar-bg rounded-md flex-col min-w-[380px] items-center w-[30%] p-3 pb-6'>
                         <div className='text-xl font-semibold p-2'>{isSignUp ? 'Sign up' : 'Log in'} to WhatsApp</div>
                         <p className='text-sm text-red-400 text-center'>{error}</p>
                         <form onSubmit={handleSubmit} className='flex flex-col items-center w-full py-4 px-6 space-y-6'>

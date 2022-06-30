@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import useConnect from "../hooks/useConnect";
 
-const Sidebar = () => {
+const Sidebar = ({ handleToogleScreen }) => {
     const [toggleDropDownload, setToggleDropDownload] = useState(false);
     const { user } = useAuth();
     const { ReloadUsers, allUsers } = useConnect();
@@ -36,7 +36,7 @@ const Sidebar = () => {
     }
 
     return (
-        <section className="relative contact-section min-w-[350px] w-[30%] bg-wp-sidebar-bg">
+        <section className="relative contact-section min-w-[350px] md:w-[30%] bg-wp-sidebar-bg">
             <div className="w-full z-10 sticky top-0">
                 {toggleDropDownload && <DropDownForSideBar />}
                 <header className="flex items-center py-2 px-4 justify-between bg-[#202c33]">
@@ -70,6 +70,7 @@ const Sidebar = () => {
                         key={val.socketId}
                         name={val.name}
                         id={val.socketId}
+                        handleToogleScreen={handleToogleScreen}
                     />
                 )) : <p>No user availabel</p>}
             </section>

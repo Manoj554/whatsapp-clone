@@ -2,11 +2,14 @@ import { FaUser } from 'react-icons/fa';
 import { AiFillMessage } from 'react-icons/ai';
 import useConnect from '../hooks/useConnect';
 
-const Contact = ({ id, name }) => {
+const Contact = ({ id, name, handleToogleScreen }) => {
     const { chatId, connectToChat, lastMessagesenderId } = useConnect();
 
     const handleClick = (id) => {
         connectToChat(id);
+        if (handleToogleScreen) {
+            handleToogleScreen();
+        }
     }
 
     return (

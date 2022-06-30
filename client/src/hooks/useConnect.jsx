@@ -29,13 +29,13 @@ export const UserProvider = ({ children }) => {
     const { user } = useAuth();
 
     const userDetails = useMemo(() => ({
-        name: user.displayName,
-        id: user.uid,
+        name: user?.displayName,
+        id: user?.uid,
         socketId: socket.id
     }), [user]);
 
     useEffect(() => {
-        if (user.displayName) {
+        if (user?.displayName) {
             socket.auth = { name: user.displayName };
             socket.connect();
             setUserInfo(userDetails);

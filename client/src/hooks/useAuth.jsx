@@ -10,17 +10,19 @@ import {
     signOut
 } from "firebase/auth";
 import { ref, set, update, push, child } from 'firebase/database';
-import InitialLoading from '../components/Loader/InitialLoading';
-import { async } from '@firebase/util';
+import InitialLoading from '../components/Loader/InitialLoading';;
+import socket from '../utils/socket';
 
 const AuthContext = createContext({
     user: null,
     loading: false,
     error: null,
+    initialLoading: true,
     signIn: async () => { },
     signUp: async () => { },
     logOut: async () => { },
-    setUserName: async () => { }
+    setUserName: async () => { },
+    setInitialLoading: () => { }
 });
 
 export const AuthProvider = ({ children }) => {
@@ -33,15 +35,13 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         setInitialLoading(true);
-
         onAuthStateChanged(auth, user => {
-            setInitialLoading(true);
             if (user) {
                 setUser(user);
             } else {
+                setUser(null);
                 router.push('/login');
             }
-            setInitialLoading(false);
         });
     }, [auth]);
 
@@ -89,6 +89,7 @@ export const AuthProvider = ({ children }) => {
 
         try {
             await signOut(auth);
+            socket.disconnect();
         } catch (error) {
             setError(error.code);
         } finally {
@@ -115,11 +116,11 @@ export const AuthProvider = ({ children }) => {
     }
 
     const memoedValue = useMemo(() => ({
-        user, loading, error, signIn, signUp, logOut, setUserName
-    }), [user, loading, error]);
+        user, loading, error, signIn, signUp, logOut, setUserName, initialLoading, setInitialLoading
+    }), [user, loading, error, initialLoading]);
 
     return <AuthContext.Provider value={memoedValue}>
-        {initialLoading ? <InitialLoading /> : children}
+        {children}
     </AuthContext.Provider>
 }
 

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import whatsappWelcomePic from '../assets/images/welcomepic.png';
 
-const Welcome = () => {
+const Welcome = ({ setToogleWelcome, handleToogleScreen }) => {
     return (
         <section className='flex flex-col items-center justify-center h-full'>
             <Image
@@ -19,9 +19,13 @@ const Welcome = () => {
 
             <div className='test mt-4 border-[#77777025] w-[50%]'></div>
 
-            <p className='m-4 text-secondary font-thin'>
+            <p className='hidden md:block m-4 text-secondary font-thin'>
                 Click a contact to start conversection or you can start a new chat.
             </p>
+
+            <button onClick={() => { setToogleWelcome(true); handleToogleScreen(true); }} className='mt-4 w-[150px] bg-[#8696a0] hover:bg-[#86a7a0] text-md py-2 rounded-md text-black'>
+                Getting started
+            </button>
 
 
         </section>

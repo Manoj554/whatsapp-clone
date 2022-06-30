@@ -20,7 +20,7 @@ const GetUserName = () => {
         <>
             {loading ? <InitialLoading /> :
                 <div className='w-full pt-20 flex items-center justify-center'>
-                    <div className="w-1/3 bg-wp-sidebar-bg py-8 px-10 rounded-xl flex flex-col items-start space-y-6 ">
+                    <div className="w-1/3 min-w-[380px] bg-wp-sidebar-bg py-8 px-6 md:px-10 rounded-xl flex flex-col items-start space-y-6 ">
                         <Logo />
                         <hr className=' w-full' />
                         <h1 className='text-2xl font-bold'>Set Your User Name</h1>
@@ -31,7 +31,7 @@ const GetUserName = () => {
                             value={displayName}
                             onChange={e => setDisplayName(e.target.value)}
                         />
-                        <button onClick={SubmitUserName} className='bg-blue-800 py-2 px-8 rounded-lg text-lg font-semibold hover:bg-blue-600'>Next</button>
+                        <button onClick={SubmitUserName} className='bg-blue-800 py-2 px-8 rounded-lg text-normal md:text-lg font-semibold hover:bg-blue-600'>Next</button>
                     </div>
                 </div>}
         </>

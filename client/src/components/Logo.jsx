@@ -7,12 +7,12 @@ const Logo = () => {
             <Image
                 src={whatsAppImage.src}
                 alt="whatsapp image"
-                height={68}
-                width={68}
+                height={60}
+                width={60}
                 objectFit="contain"
 
             />
-            <div className='text-5xl font-bold'>WhatsApp</div>
+            <div className='text-4xl font-bold'>WhatsApp</div>
         </div>
     )
 }

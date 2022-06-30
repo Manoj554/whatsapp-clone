@@ -27,8 +27,8 @@ const InitialLoading = () => {
     }, []);
 
     return (
-        <div className='flex flex-col w-full h-screen items-center justify-center'>
-            <div className='text-5xl flex w-1/3 text-[#8696a0] justify-center space-x-5 items-center'>
+        <div className='flex flex-col w-full h-[90vh] items-center justify-center'>
+            <div className='text-5xl flex min-w-[380px] w-1/3 text-[#8696a0] justify-center space-x-4 items-center'>
                 <BsWhatsapp />
                 <div id='dots' className='text-[#282828] flex space-x-3'>
                     <li>.</li>

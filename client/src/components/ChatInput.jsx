@@ -2,8 +2,8 @@ import { MdAttachment, MdEmojiEmotions, MdSend } from 'react-icons/md';
 
 const ChatInput = ({ input, setInput, handleSubmit }) => {
     return (
-        <form onSubmit={handleSubmit} className='absolute bottom-0 left-0 py-2 px-4  bg-[#202c33] w-full flex items-center justify-between space-x-5'>
-            <div className='flex space-x-4 text-3xl text-[#8696a0]'>
+        <form onSubmit={handleSubmit} className='absolute bottom-0 left-0 py-2 px-2 md:px-4  bg-[#202c33] w-full flex items-center justify-between space-x-3 md:space-x-5'>
+            <div className='flex space-x-2 md:space-x-4 text-3xl text-[#8696a0]'>
                 <button type='button'>
                     <MdEmojiEmotions />
                 </button>
