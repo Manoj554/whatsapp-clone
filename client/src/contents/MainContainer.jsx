@@ -12,7 +12,6 @@ const MainContainer = ({ handleToogleScreen, setToogleWelcome, toogleWelcome }) 
         let user = allUsers.filter((val) => val.socketId === chatId)[0];
         setUserDetails(user);
         let currentUser = allUsersMessages.filter(val => val.socketId === chatId)[0];
-        console.log(allUsersMessages);
         if (currentUser) {
             setMessageContainer(currentUser.messages);
         }
